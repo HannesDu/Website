@@ -159,8 +159,8 @@ function updateCanvasDimensions() {
         height: 250,
         width: 500
     });
-    canvasWidth = 250;
-    canvasHeight = 500;
+    canvasWidth = canvas.width();
+    canvasHeight = canvas.height();
     draw();
 }
  
