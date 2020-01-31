@@ -245,20 +245,29 @@ function drawName(name, letterColors) {
         }
  
         if (document.alphabet.hasOwnProperty(cc_hex)) {
-            var chr_data = document.alphabet[cc_hex].P;
-            var bc = letterColors[ix % letterColors.length];
- 
-            for (var i = 0; i < chr_data.length; ++i) {
-                point = chr_data[i];
- 
-                g.push(new Point(point[0] + offset,
-                    point[1],
-                    0.0,
-                    point[2],
-                    makeColor(bc, point[3])));
-            }
-            offset += document.alphabet[cc_hex].W;
-        }
+
+    // definition of our variable
+    var fontSizeMultiplier = 0.5;
+
+    var chr_data = document.alphabet[cc_hex].P;
+    var bc = letterColors[ix % letterColors.length];
+
+    for (var i=0; i<chr_data.length; ++i) {
+        point = chr_data[i];
+
+        g.push(
+            // multiplication of x and y coordinates by defined value
+            new Point(point[0] * fontSizeMultiplier + offset,
+            point[1] * fontSizeMultiplier,
+            
+            0.0,
+            point[2],
+            makeColor(bc,point[3])));
+    }
+    
+    // multiplication of letter width by our multiplier
+    offset += document.alphabet[cc_hex].W * fontSizeMultiplier;
+}
     }
  
     var hexphrase = phraseToHex(name);
