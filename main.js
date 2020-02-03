@@ -6,7 +6,7 @@ var red = [0, 100, 63];
 
 var myName = "Hannes Du";
 var letterColors = [red, orange, green, blue, purple];
-if(10 < 3) {
+if(10 > 3) {
     bubbleShape = "circle";
 }
 
