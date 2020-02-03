@@ -5,13 +5,10 @@ var red = [0, 100, 63];
 // var purple = [280, 50, 60];
 
 var myName = "Hannes Du";
-var letterColors = [red, orange, green, blue, purple];
-if(3 < 10) {
+var letterColors = [red];
+// , orange, green, blue, purple
+if (3 < 10) {
     bubbleShape = "circle";
-}
-
-else {
-    bubbleShape = "square";
 }
 
 drawName(myName, letterColors);
