@@ -156,8 +156,8 @@ function initEventListeners() {
  
 function updateCanvasDimensions() {
     canvas.attr({
-        height: 500,
-        width: 1000
+        height: 1000,
+        width: 2000
     });
     canvasWidth = canvas.width();
     canvasHeight = canvas.height();
@@ -295,8 +295,8 @@ $(window).mouseenter(function () {
 });
  
 var canvas = $("#myCanvas");
-var canvasHeight = 500;
-var canvasWidth = 1000;
+var canvasHeight = 1000;
+var canvasWidth = 2000;
 var ctx;
 var pointCollection;
  
